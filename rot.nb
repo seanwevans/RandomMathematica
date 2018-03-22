@@ -1,0 +1,165 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5537,        156]
+NotebookOptionsPosition[      5180,        139]
+NotebookOutlinePosition[      5527,        154]
+CellTagsIndexPosition[      5484,        151]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"F", "[", 
+    RowBox[{
+    "s_", ",", "p\[Alpha]_", ",", "pl_", ",", "c\[Alpha]_", ",", "cl_"}], 
+    "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"p", "=", 
+       RowBox[{"{", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0"}], "}"}], "}"}]}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"x", "=", "0"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"y", "=", "0"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"For", "[", 
+       RowBox[{
+        RowBox[{"i", "=", "1"}], ",", 
+        RowBox[{"i", "\[LessEqual]", "s"}], ",", 
+        RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"PrimeQ", "[", "i", "]"}], ",", 
+           RowBox[{
+            RowBox[{"x", "+=", 
+             RowBox[{"pl", " ", 
+              RowBox[{"Sin", "[", "p\[Alpha]", "]"}]}]}], ";", 
+            RowBox[{"y", "+=", 
+             RowBox[{"pl", " ", 
+              RowBox[{"Cos", "[", "p\[Alpha]", "]"}]}]}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"x", "+=", 
+             RowBox[{"cl", " ", 
+              RowBox[{"Sin", "[", "c\[Alpha]", "]"}]}]}], ";", 
+            RowBox[{"y", "+=", 
+             RowBox[{"cl", " ", 
+              RowBox[{"Cos", "[", "c\[Alpha]", "]"}]}]}]}]}], "]"}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"p", ",", 
+           RowBox[{"{", 
+            RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}]}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Return", "[", "p", "]"}]}]}], "]"}]}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.6774233815992928`*^9, 3.6774235068690343`*^9}, {
+  3.6774235742418914`*^9, 3.6774236123082924`*^9}, {3.6774237013550963`*^9, 
+  3.677423797690997*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Graphics", "[", 
+    RowBox[{"Line", "[", 
+     RowBox[{"F", "[", 
+      RowBox[{"100", ",", "a", ",", "1", ",", "b", ",", "1"}], "]"}], "]"}], 
+    "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", 
+     RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"b", ",", 
+     RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6774235210811777`*^9, 3.677423525469207*^9}, {
+  3.6774238313474655`*^9, 3.6774238378743577`*^9}, {3.677423887466925*^9, 
+  3.6774239574487796`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = -1.2566370614359172`, \
+$CellContext`b$$ = 2.5132741228718345`, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`a$$], -Pi, Pi}, {
+      Hold[$CellContext`b$$], -Pi, Pi}}, Typeset`size$$ = {
+    187., {214., 218.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`a$1060$$ = 
+    0, $CellContext`b$1065$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`a$$ = -Pi, $CellContext`b$$ = -Pi}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`a$$, $CellContext`a$1060$$, 0], 
+        Hold[$CellContext`b$$, $CellContext`b$1065$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Graphics[
+        Line[
+         $CellContext`F[100, $CellContext`a$$, 1, $CellContext`b$$, 1]]], 
+      "Specifications" :> {{$CellContext`a$$, -Pi, Pi}, {$CellContext`b$$, -
+         Pi, Pi}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{258., {298., 305.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.677423525875553*^9, {3.677423587092019*^9, 3.677423608922044*^9}, {
+   3.677423832879017*^9, 3.67742383831096*^9}, {3.677423890730624*^9, 
+   3.677423913803102*^9}, 3.677423958136774*^9}]
+}, Open  ]]
+},
+WindowSize->{759, 541},
+WindowMargins->{{Automatic, 292}, {Automatic, 64}},
+FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (December 10, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1914, 52, 192, "Input"],
+Cell[CellGroupData[{
+Cell[2497, 76, 608, 16, 31, "Input"],
+Cell[3108, 94, 2056, 42, 620, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
